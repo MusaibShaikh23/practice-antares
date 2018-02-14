@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule , routingComponents } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import {McBreadcrumbsConfig, McBreadcrumbsModule, McBreadcrumbsService} from 'ngx-breadcrumbs';
 
 
 
@@ -14,9 +15,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    McBreadcrumbsModule
   ],
-  providers: [],
+  providers: [McBreadcrumbsService , McBreadcrumbsConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
